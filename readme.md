@@ -1,6 +1,12 @@
 Russ Olsen - Getting Clojure
 ============================
 
+###[Book website @ Pragmatic Bookshelf](https://pragprog.com/titles/roclojure/getting-clojure/)
+
+  * Pages: 288
+  * Published: May 2018
+  * ISBN: 9781680503005
+
 
 Chapter 01. Hello, Clojure
 --------------------------
@@ -326,7 +332,6 @@ Binding created by def exists until the program terminates or is overwritten. Th
 When you evaluate a `def`, Clojure creates a *var* which holds the binding of a symbol to a value.
 
 ```
-   
   +------------+------------+
   |     PI     |   3.14     |
   +------------+------------+
