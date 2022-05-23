@@ -332,7 +332,11 @@ E.g. concat a vector of strings:
 
 ### `partial`
 
-Constructs a fn with one of the parameters "baked in".
+Constructs a fn with one or more of the parameters "baked in". It _partially_ fills in the arguments, producing a new fn.
+
+```clojure
+(def my-inc (partial + 1))
+```
 
 ### `complement` 
 
