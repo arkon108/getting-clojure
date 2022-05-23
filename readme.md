@@ -17,6 +17,18 @@ Usually, Clojure can only use symbols after they've been defined, but it's possi
 
 Mostly clojurists stick to defining function before using them, reserving `declare` to mutually recursive fns.
 
+
+Division will return a ratio, which is specific to Clojure.
+
+```clojure
+;; division / will give a ratio
+(/ 8 3) ;=> 8/3
+
+;; to get int truncation, use "quot"(ient)
+(quot 8 3) ;=> 2
+```
+
+
 Chapter 02. Vectors and Lists
 -----------------------------
 
@@ -25,6 +37,25 @@ Chapter 02. Vectors and Lists
 
 Vectors are continuous chunk of memory. Lists are implemented as linked lists. So getting 654'th element of a vector is faster than a list. For lists, it's simpler to prepend, for vectors to append. That's why `conj` will prepend a list, but append a vector.
 
+
+Vectors can be created with literal syntax `[]` or with `vector` fn.
+
+```clojure
+;; the same as “[true 3 "four" 5]”
+(vector true 3 "four" 5)
+```
+
+Most useful functions for vectors (and other collections) are `first`, `rest`, `nth`.
+
+```clojure
+(def year-books ["1491" "1984" "2001" "April 1856"])
+(nth year-books 2)
+;=> "2001"
+
+;; it's also possible to call vector as a function
+;; with index as an argument, so the next is eq to last call
+(year-books 2)
+```
 
 Chapter 03. Maps, Keywords and Sets
 -----------------------------------

@@ -17,6 +17,7 @@
 ;; conj(unction)
 ;; to grow a vector at the end
 (conj novels "Carrie")
+;=> ["Emma" "Coma" "War and Peace" "Carrie"]
 
 
 ;; cons(truct)
