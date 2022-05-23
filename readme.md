@@ -57,10 +57,14 @@ Vectors can be created with literal syntax `[]` or with `vector` fn.
 (vector true 3 "four" 5)
 ```
 
-Most useful functions for vectors (and other collections) are `first`, `rest`, `nth`.
+Most useful functions for vectors (and other collections) are `first`, `rest`, `nth`, and `count`.
 
 ```clojure
 (def year-books ["1491" "1984" "2001" "April 1856"])
+
+(count year-books)
+;=> 4
+
 (nth year-books 2)
 ;=> "2001"
 

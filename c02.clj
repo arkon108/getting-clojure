@@ -22,3 +22,6 @@
 
 ;; cons(truct)
 ;; will append, but also return a seq
+
+(cons "It" novels)
+;=> ("It" "Emma" "Coma" "War and Peace")
