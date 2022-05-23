@@ -13,5 +13,13 @@
 
 
 ;; function definition
-;; 
 (defn hello-world [] (println "Hello, world!"))
+
+
+;; declaring things (if needed before they are defined)
+(declare some-fn)
+
+(println some-fn "hello")
+
+(defn some-fn [s] 
+ (str s " there!"))
