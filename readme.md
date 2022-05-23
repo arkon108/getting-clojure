@@ -73,12 +73,25 @@ Most useful functions for vectors (and other collections) are `first`, `rest`, `
 (year-books 2)
 ```
 
+When passing lists around, they need to be quoted, otherwise Clojure will try to evaluate them - since fn calls are lists where the first item is the fn name.
+
+```clojure
+'(1 2 3)
+```
+
+Lists can also be created with `list` function.
+
+```clojure
+(list 1 2 3 "four" 5 "six")
+```
+
 Chapter 03. Maps, Keywords and Sets
 -----------------------------------
 
 The method to create a map is `hash-map`.
 
 Getting elements from map can be done like
+
 ```clojure
 (get map-name "key")
 ;; this is the same
@@ -142,13 +155,15 @@ Since `if` only allows a single expression, we can use `do` to evaluate multiple
 
 For situations where we only want to have `if...then`, without the `else`, Clojure has `when`, which has an implicit `do`.
 
+
+
 `cond` is similar to a `switch`. If no predicates come back as truthy, it evaluates `nil`. 
 
 ```clojure
 (defn shipping-charge [preferred-customer order-amount]
 (cond 
   preferred-customer 0.0
-  (< order-amount 50.0) 5.0)
+  (< order-amount 50.0) 5.0
   (< order-amount 100.0) 10.0))
 ```
 For a "default" kind of behavior, we have `:else` keyword. 

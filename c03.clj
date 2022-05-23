@@ -1,4 +1,5 @@
 (ns c03)
+;; Chapter 03. Maps, Keywords and Sets
 
   (def book {
              "title" "Oliver Twist"
@@ -19,7 +20,7 @@
 (book "published")
 
 ;; when using keywords, it's possible to use keyword
-;; as an invocation to retrieve values OutOfMemoryError
+;; as an invocation to retrieve values 
 
 (def book2 {:title "Oliver Twist"
             :author "Charles Dickens"

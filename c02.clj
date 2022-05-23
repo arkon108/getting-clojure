@@ -1,4 +1,5 @@
 (ns c02)
+;; Chapter 02. Vectors and Lists
 
 ;; the same as “[true 3 "four" 5]”
 (vector true 3 "four" 5)

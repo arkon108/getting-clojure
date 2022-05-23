@@ -1,5 +1,4 @@
 (ns c01)
-
 ;; Chapter 01. Hello, Clojure
 
 (str "Concat" " " "strings")
