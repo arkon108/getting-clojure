@@ -216,11 +216,77 @@ Chapter 05. More Capable Functions
 
 ### Multi-arity functions
 
+Clojure supports functions with variable number of arguments. For example, a common pattern is a function which has one arity, usually with most arguments - which does something, and other arities, ones with fewer arguments, fill in the missing arguments and call that main version.
+
+```clojure
+(defn greet
+  ([to-whom]
+   (greet "Hello" to-whom))
+  ([message to-whom]
+   (println message to-whom)))
+```
+
 ### Variadic functions
+
+Variadic functions can take *any* number of arguments. They often use `&` symbol to break up the arguments. They are also called _varargs_.
+
+```clojure
+(defn first-argument [& args]
+  (first args))
+  
+;; same!
+(defn first-argument [x & args]
+  x)
+```
 
 ### Multimethods
 
 Allow to have a single function with multiple implementations. Where multi-arity fns allow to pick the implementation based on the number of args, multimethods pick the implementation based on *any* characteristic of arguments.
+
+Writing multimethods follows the recipe:
+
+1. define the dispatch function - what are we differentiating between arguments - based on what are we going to handle them differently?
+2. define the multimethod and the dispatch fn it uses
+3. write the separate methods for each dispatch case
+
+
+```clojure
+;; 1. let's say we need to calculate royalties based on the copyright
+(defn dispatch-published [book]
+	(cond 
+		(< (:published book) 1928) :public-domain
+		(< (:published book) 1978) :old-copyright
+		:else :new-copyright))
+		
+(defmulti compute-royalties dispatch-published)
+
+(defmethod compute-royalties :public-domain [book]
+	0)
+
+(defmethod compute-royalties :old-copyright [book]
+	;; compute royalties...
+)
+
+(defmethod compute-royalties :new-copyright [book]
+	;; compute royalties...
+)
+```
+
+### Recursion
+
+To avoid blowing the stack, instead of calling the function name, call `recur`.
+
+```clojure
+(defn sum-copies-l [books]
+  (loop [books books total 0]
+    (if (empty? books)
+      total
+      (recur 
+         (rest books)
+         (+ total (:copies-sold (first books))))
+    )))
+```
+
 
 ### Pre and Post conditions
 

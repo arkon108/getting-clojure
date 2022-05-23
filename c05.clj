@@ -33,7 +33,7 @@
 (def b2 {:book "Insomnia" :by "Stephen King"})
 (def b3 ["1984" "George Orwell"])
 
-; lets decide on the book format
+; let's decide on the book format
 (defn dispatch-book-format [book]
   (cond 
     (vector? book) :vector-book
@@ -111,3 +111,17 @@
   "Length of ISBN code"
   13)
 
+
+;; Pre and Post conditions
+
+(defn publish-book [book]
+{:pre [(:title book)]}
+  (print-book book)
+  (ship-book book))
+
+
+(defn publish-book [book]
+{:pre [(:title book)]
+ :post [(boolean? %)]}
+  (print-book book)
+  (ship-book book))
