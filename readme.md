@@ -2,8 +2,14 @@ Russ Olsen - Getting Clojure
 ============================
 
 
-Chapter 01
-----------
+Chapter 01. Hello, Clojure
+--------------------------
+
+Leiningen is a project manager, REPL runner and more. To start the (better than default) REPL, run
+
+```clojure
+lein repl
+```
 
 Clojure programmers adopted the convention to name the symbols "lower-case-with-dashes". That is referred to as *kebab case*
 

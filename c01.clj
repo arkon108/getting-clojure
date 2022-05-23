@@ -1,5 +1,7 @@
 (ns c01)
 
+;; Chapter 01. Hello, Clojure
+
 (str "Concat" " " "strings")
 
 (count "Will give a number of characters")
