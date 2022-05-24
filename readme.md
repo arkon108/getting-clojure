@@ -506,7 +506,6 @@ For example, let's use `diff` fn from `clojure.data`.
 (clojure.data/diff literature horror)
 
 ;; because we haven't loaded the namespaced function, we need to require it 
-
 (require 'clojure.data)
 ```
 
