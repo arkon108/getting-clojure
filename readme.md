@@ -405,6 +405,12 @@ In the function which returns uppercase name of author, we need to check if the 
 
 There is also a `when-let`.
 
+```clojure
+(defn uppercase-author [book]
+  (when-let [author (:author book)]
+  (.toUpperCase author)))
+```
+
 
 Chapter 8. Def, Symbols, and Vars
 ---------------------------------
