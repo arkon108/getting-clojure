@@ -539,7 +539,7 @@ It's possible to look up any existing namespace with `find-ns`.
 (find-ns 'user)
 ```
 
-Now you can get everything that n knows about with `ns-map`
+Now you can get everything that ns knows about with `ns-map`
 
 ```clojure
 (ns-map (find-ns 'user))
