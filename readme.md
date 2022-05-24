@@ -927,6 +927,8 @@ Or, even better, run tests from the command line with `lein test`
 
 This enables us to state the property we want to test, along with the description of the input data for which that property should hold. 
 
+See also [inventory example tests](inventory/test/inventory/core_gen_test.clj).
+
 Clojure library which enables us to do this is [test.check](https://github.com/clojure/test.check). It provides a number of generators to create more or less random data for testing.
 
 ```clojure
