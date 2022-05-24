@@ -1,6 +1,13 @@
 (ns c10)
 ;; Chapter 10. Sequences
 
+
+(def title-seq (seq ["Emma" "Oliver Twist" "Carrie"]))
+
+(seq {:title "Emma", :author "Austen", :published 1815})
+;=>([:title "Emma"] [:author "Austen"] [:published 1815])
+
+
 ;; making any collection into a sequence makes it possible
 ;; to have single count method 
 
@@ -14,14 +21,16 @@
 
 (def book-list ["2001" "Clarke" "Foundation" "Asimov"])
 (partition 2 book-list)
+;=>(("2001" "Clarke") ("Foundation" "Asimov"))
 
 (def titles ["Večernji akt" "Smogovci"])
 (def authors ["Pavličić" "Hitrec"])
 (interleave titles authors)
+;=> ("Večernji akt" "Pavličić" "Smogovci" "Hitrec")
 
 (def scary-animals ["tigers" "bears" "lions"])
 (interpose "and" scary-animals)
-
+;=> ("tigers" "and" "bears" "and" "lions")
 
 ; map
 (def nums [1 11 22 13])
