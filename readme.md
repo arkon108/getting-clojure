@@ -725,7 +725,7 @@ Let's pry open some data:
   (println "Novelist is " novelist))
 ```
 
-What if there's more element,s and we want to skip some? The convention is to use the underscore. 
+What if there's more elements and we want to skip some? The convention is to use the underscore. 
 
 ```clojure
 (def artists [:monet :austen :beethoven :dickinson])

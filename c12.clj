@@ -4,14 +4,12 @@
 (def authors [:monet :austen])
 
 ;; destructure in let
-
 (let [[painter novelist] authors]
   (println "Painter is " painter)
   (println "Novelist is " novelist))
 
 
 ;; skipping some 
-
 (def artists [:monet :austen :beethoven :dickinson])
 
 (let [[_ _ composer poet] artists]
@@ -28,7 +26,6 @@
 
 
 ;; Maps
-
 (def artist-map {
                  :painter :monet
                  :novelist :austen 
@@ -49,7 +46,6 @@
 
 
 ;; mixing and matching 
-
 (def authors [
 {:name "Jane Austen" :born 1775}
 {:name "Charles Dickens" :born 1812}
@@ -67,7 +63,7 @@
   (str "Name:" name ", age:" age ", gender: " gender))
 
 
-;; 
+;; pulling keys out
 (defn add-greeting [character]
 (let [{:keys [name age]} character]
   (assoc character
@@ -75,7 +71,7 @@
   (str "Hello, my name is " name " and I'm " age " years old.")
   )))
 
-  ;; same, simpler, using :as 
+;; same, simpler, using :as 
 (defn add-greeting[{:keys [name age] :as character}]
 (assoc character
   :greeting 
