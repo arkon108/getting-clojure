@@ -421,7 +421,7 @@ Binding created by def exists until the program terminates or is overwritten. Th
 
 ```clojure
 ;; Everyone's favorite universal constant.
- 	(def PI 3.14)
+  (def PI 3.14)
 ```
 
 When you evaluate a `def`, Clojure creates a *var* which holds the binding of a symbol to a value.
@@ -456,7 +456,7 @@ Changing the value of vars?
     (println msg)))
 ```
 
-For situations like this, Clojure gives `binding`. Very similar to `let`. However, any var used in *binding* needs to be declared as dynamic. Also, the convention is that dynamic vars should start and end with *. Clojurists refer to surrounding asterisks as _earmuffs_. So we can at a glance see which vars are usable in *binding*.
+For situations like this, Clojure gives `binding`. Very similar to `let`. However, any var used in *binding* needs to be declared as dynamic. Also, the convention is that dynamic vars should start and end with \*. Clojurists refer to surrounding asterisks as _earmuffs_. So we can at a glance see which vars are usable in *binding*.
 
 ```clojure
 (def ^:dynamic *debug-enabled* false)
