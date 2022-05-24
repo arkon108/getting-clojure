@@ -1019,7 +1019,6 @@ Chapter 15. Spec
 Relatively new addition is `clojure.spec` which enables us to validate the shape of values - to ensure the proper data types.
 
 ```clojure
-
 (ns inventory.core
 (:require [clojure.spec.alpha :as s]))
 
@@ -1113,7 +1112,7 @@ To understand why a spec is failing, we can use `explain`, which takes same argu
 While `explain` prints what went wrong with a spec, `conform` will tell about the successful match.
 
 ```clojure
-s/conform s-n-s-n ["Emma" 1815 "Jaws" 1974]
+(s/conform s-n-s-n ["Emma" 1815 "Jaws" 1974])
 ```
 
 ### Function Specs
@@ -1146,7 +1145,7 @@ However, `clojure.spec` provides a fn to enable this, `spec/fdef`.
 ```
 
 
-Because of the performance penalty, the checking is disaleld by default. For that reason, it's the best to use it only during testing and development. 
+Because of the performance penalty, the checking is disabled by default. For that reason, it's the best to use it only during testing and development. 
 
 To enable argument checking, we need to require another namespace.
 
