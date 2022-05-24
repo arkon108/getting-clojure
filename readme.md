@@ -628,7 +628,7 @@ We also have a `for` function.
 Chapter 11. Lazy sequences
 --------------------------
 
-Suppose we want a bunch of nonsense text, for teting purposes...
+Suppose we want a bunch of nonsense text, for testing purposes...
 
 ```clojure
 (def jack "All work and no play makes Jack a dull boy")
