@@ -1549,7 +1549,7 @@ Between vars and atoms and refs and agents?
 Chapter 19. Read and Eval
 -------------------------
 
-  Clojure uses the same syntax to represent code and data. `read` turns characters into data structures and then `eval` turns those into action.
+Clojure uses the same syntax to represent code and data. `read` turns characters into data structures and then `eval` turns those into action.
 
 
 Let's read a file full of Clojure code:
@@ -1668,7 +1668,7 @@ Will get turned into this
 
 ### Syntax quoting
 
-To make writing code macros easier Clojure gives us the code templating system of syntax quoting. To set off the syntax quoted expressions, use backtick `.
+To make writing code macros easier Clojure gives us the code templating system of syntax quoting. To set off the syntax quoted expressions, use backtick \`.
 
 Syntax quoting uses tilde character ~ to mark the places where values should get inserted.
 
@@ -1692,7 +1692,7 @@ Syntax quoting uses tilde character ~ to mark the places where values should get
   (zero? 100) "It's a zero!"
   :else "It's negative!")
 
-;; or actually, to avoid ns confusion 
+;; or actually, to avoid ns ambiguity 
 (clojure.core/cond 
   (clojure.core/pos? 100) "It's positive!"
   (clojure.core/zero? 100) "It's a zero!"
