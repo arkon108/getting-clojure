@@ -6,6 +6,7 @@ Russ Olsen - Getting Clojure
   * Pages: 288
   * Published: May 2018
   * ISBN: 9781680503005
+  * read May 20th 2022.
 
 
 Chapter 01. Hello, Clojure
