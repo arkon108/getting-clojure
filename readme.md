@@ -1246,7 +1246,7 @@ To avoid using fully qualified Java package names, we can use `import` much in t
 (ns read-authors 
   (:import java.io.File))
 
-;; once imported, we can refer to  the class without it's package name 
+;; once imported, we can refer to  the class without its package name 
 
 (def author (File. "authors.txt"))
 ```
@@ -1259,7 +1259,7 @@ Note that importing a single class doesn't need a quote, while importing multipl
   (:import (java.io File InputStream)))
 
 ;; in the REPL 
-(import '(java.io File Input Stream))
+(import '(java.io File InputStream))
 ```
 
 The package `java.lang` is automatically imported.
