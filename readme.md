@@ -1524,14 +1524,14 @@ If the update to agent fails, it will raise an exception. We can check state of 
     :clear-actions true))
 ```
 
-Since agents rely on behind-the-scenes thread pool manageed by Clojure, and JVM can be finicky about terminating when there are live threads around - we can use `shutdown-agents1 to shutdown agents in the thread pool. 
+Since agents rely on behind-the-scenes thread pool manageed by Clojure, and JVM can be finicky about terminating when there are live threads around - we can use `shutdown-agents1` to shutdown agents in the thread pool. 
 
 It's always good idea to call `shutdown-agents` just before the end of the program that uses agents.
 
 ```clojure
 (defn -main []
-;; doing stuff with agents 
-(shutdown-agents)
+  ;; doing stuff with agents 
+  (shutdown-agents)
 )
 ```
 
