@@ -1,7 +1,7 @@
 Russ Olsen - Getting Clojure
 ============================
 
-###[Book website @ Pragmatic Bookshelf](https://pragprog.com/titles/roclojure/getting-clojure/)
+### [Book website @ Pragmatic Bookshelf](https://pragprog.com/titles/roclojure/getting-clojure/)
 
   * Pages: 288
   * Published: May 2018
