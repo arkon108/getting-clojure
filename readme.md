@@ -12,6 +12,8 @@ Russ Olsen - Getting Clojure
 Chapter 01. Hello, Clojure
 --------------------------
 
+[chapter source code →](c01.clj)
+
 Leiningen is a project manager, REPL runner and more. To start the (better than default) REPL, run
 
 ```clojure
@@ -44,6 +46,8 @@ Division will return a ratio, which is specific to Clojure.
 
 Chapter 02. Vectors and Lists
 -----------------------------
+
+[chapter source code →](c02.clj)
 
 `cons`(truct) will prepend and return a sequence.
 `conj`(junction) will append and return a vector (if performed on a vector).
@@ -89,6 +93,8 @@ Lists can also be created with `list` function.
 Chapter 03. Maps, Keywords and Sets
 -----------------------------------
 
+[chapter source code →](c03.clj)
+
 The method to create a map is `hash-map`.
 
 Getting elements from map can be done like
@@ -126,6 +132,8 @@ For example:
 
 Chapter 04. Logic
 -----------------
+
+[chapter source code →](c04.clj)
 
 `if` is not a fn, it's a special form. Because not all arguments will be evaluated.
 
@@ -214,6 +222,7 @@ To catch the exception thrown like this, I need to look for exceptions of type `
 Chapter 05. More Capable Functions
 ----------------------------------
 
+[chapter source code →](c05.clj)
 
 ### Multi-arity functions
 
@@ -316,6 +325,8 @@ These accept a vector of expressions to evaluate. If any evaluates to false, the
 Chapter 06. Functional Things
 -----------------------------
 
+[chapter source code →](c06.clj)
+
 Functions are values. Can be returned from other functions, can be passed to functions.
 
 ### `apply`
@@ -371,6 +382,8 @@ A style suggestion is not to use numbered literals, better use full anon fn nota
 Chapter 7. Let
 --------------
 
+[chapter source code →](c07.clj)
+
 Calling `def` within a fn will make a value globally visible - its a big no-no. Might be useful for debugging purposes tho :)
 
 So assigning values to symbols ("creating variables") in fn's local scope is what `let` does.
@@ -415,6 +428,8 @@ There is also a `when-let`.
 
 Chapter 8. Def, Symbols, and Vars
 ---------------------------------
+
+[chapter source code →](c08.clj)
 
 `def` binds a symbol to a value.
 
@@ -489,6 +504,8 @@ books
 Chapter 9. Namespaces
 ---------------------
 
+[chapter source code →](c09.clj)
+
 *Vars* live in namespaces. Basically, a ns is a big lookup table of vars, indexed by their symbols.
 
 `ns` creates a namespace and makes it a current namespace. I can also use it to switch between namespaces.
@@ -553,6 +570,8 @@ Getting to other projects written in Clojure is done via Leiningen's project fil
 
 Chapter 10. Sequences
 ---------------------
+
+[chapter source code →](c10.clj)
 
 To wrap a collection in a sequence:
 
@@ -628,6 +647,8 @@ We also have a `for` function.
 
 Chapter 11. Lazy sequences
 --------------------------
+
+[chapter source code →](c11.clj)
 
 Suppose we want a bunch of nonsense text, for testing purposes...
 
@@ -714,6 +735,7 @@ Be careful, calling `count`, `sort` or `reduce` over an infinite sequence is a b
 Chapter 12. Destructuring
 -------------------------
 
+[chapter source code →](c12.clj)
 
 Let's pry open some data:
 
@@ -838,6 +860,8 @@ When destructuring fn arguments, it's still possible to get the entire map which
 Chapter 13. Records and Protocols
 ---------------------------------
 
+[chapter source code →](c13.clj)
+
 Records are like maps with predefined keys. Maps can incur a resource penalty in more intensive use cases.
 
 ```clojure
@@ -890,6 +914,8 @@ In cases I want to test the protocol, I can create a one-off implementation. To 
 
 Chapter 14. Tests
 -----------------
+
+[chapter source code →](c14.clj)
 
 Clojure comes with the library for writing unit tests - `clojure.test`. In a Clojure project the tests usually live in the `test` subdir. The convention is to put tests for a namespace in a parallel `-test` module.
 
@@ -1014,6 +1040,8 @@ This gives us `clojure.test` test which runs the property test.
 
 Chapter 15. Spec
 ----------------
+
+[chapter source code →](c15.clj)
 
 [https://clojure.org/about/spec](https://clojure.org/about/spec)
 
@@ -1207,6 +1235,8 @@ We can also use a fn
 Chapter 16. Interoperating with Java
 ------------------------------------
 
+[chapter source code →](c16.clj)
+
 Java class method for getting a file:
 
 ```clojure
@@ -1306,6 +1336,8 @@ E.g. if we want to check a collection of files if they exist:
 
 Chapter 17. Threads, Promises, and Futures
 ------------------------------------------
+
+[chapter source code →](c17.clj)
 
 The default thread we get by simply running a program is called _main thread_
 
@@ -1428,6 +1460,8 @@ Also, be aware that JVM will refuse to stop if there are running threads.
 Chapter 18. State 
 -----------------
 
+[chapter source code →](c18.clj)
+
 Since Clojure philosophy is to avoid mutable state, but state is needed, there are certain ways of dealing with state. 
 
 ### Atoms
@@ -1549,6 +1583,8 @@ Between vars and atoms and refs and agents?
 Chapter 19. Read and Eval
 -------------------------
 
+[chapter source code →](c19.clj)
+
 Clojure uses the same syntax to represent code and data. `read` turns characters into data structures and then `eval` turns those into action.
 
 
@@ -1616,6 +1652,8 @@ Check out [MAL (Make A Lisp) project](https://github.com/kanaka/mal).
 
 Chapter 20. Macros
 ------------------
+
+[chapter source code →](c20.clj)
 
 To illustrat need for and use of macros, let's suppose we have a rating system which has three ratings - positive, neutral and negative, reprezented by a number which can be less than, equal to or greater than zero.
 
